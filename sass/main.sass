@@ -1,0 +1,56 @@
+*  
+   margin: 0
+   padding: 0
+   box-sizing: border-box
+   font-style: italic
+   
+.container  
+   position: relative
+   display: block
+   height: 100vh
+   width: 100%
+   background-color: #000000
+   &__collapse
+      display: flex
+      flex-flow: row wrap
+      align-content: space-between
+      height: 21px
+      width: 22px
+      background: #000
+      position: absolute
+      right: 20px
+      top: 20px
+      &:hover .container__collapse-board
+         background-color: #17609c         
+      &-board 
+         height: 2px
+         width: 100%
+         background-color: #ffffff
+         border-radius: 3px     
+         transition: .2s ease background-color
+      &-nav
+         position: relative
+         // display: none
+         height: 0
+         opacity: 0
+         width: 100%
+         background: linear-gradient(to top left, #010933, #01030d)
+         top: 50px  
+         transition: .7s ease-out opacity, .3s ease height 
+         &__list
+            list-style: none
+            text-align: center
+            font-size: 3vh
+         &__item
+            height: 50px
+         &__link
+            color: #ffffff
+            text-decoration: none
+            transition: .1s ease color
+            &:hover
+               color: #17609c
+         &__active
+            opacity: 1
+            height: calc(100vh - 680px)
+      
+      

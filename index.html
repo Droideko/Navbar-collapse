@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="css/main.css">
+   <title>Document</title>
+</head>
+<body>
+   <div class="container">
+      <a href="#" class="container__collapse">
+         <div class="container__collapse-board"></div>
+         <div class="container__collapse-board"></div>
+         <div class="container__collapse-board"></div>
+         <div class="container__collapse-board"></div>         
+      </a>
+      <div class="container__collapse-nav">
+         <ul class="container__collapse-nav__list">
+            <li class="container__collapse-nav__item"><a href="#" class="container__collapse-nav__link">Design</a></li>
+            <li class="container__collapse-nav__item"><a href="#" class="container__collapse-nav__link">Innovation</a></li>
+            <li class="container__collapse-nav__item"><a href="#" class="container__collapse-nav__link">Museum & History</a></li>
+            <li class="container__collapse-nav__item"><a href="#" class="container__collapse-nav__link">Sports</a></li>
+            <li class="container__collapse-nav__item"><a href="#" class="container__collapse-nav__link">Events</a></li>
+            <li class="container__collapse-nav__item"><a href="#" class="container__collapse-nav__link">Lifestyle</a></li>
+         </ul>
+      </div>   
+   </div>
+   <script>
+      let btn = document.querySelector('.container__collapse');
+      let collapse = document.querySelector('.container__collapse-nav');
+      btn.addEventListener('click', (e) => {
+         e.preventDefault();         
+         if (collapse.classList[1] == 'container__collapse-nav__active') {
+            collapse.classList.remove('container__collapse-nav__active');
+         } else {
+            collapse.classList.add('container__collapse-nav__active');            
+         }                           
+      })  
+   </script>
+</body>
+</html>
