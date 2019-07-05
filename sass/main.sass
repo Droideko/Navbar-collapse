@@ -10,6 +10,7 @@
    height: 100vh
    width: 100%
    background-color: #000000
+   z-index: 2
    &__collapse
       display: flex
       flex-flow: row wrap
@@ -20,6 +21,14 @@
       position: absolute
       right: 20px
       top: 20px
+      transition: transform 2s ease
+      &-close
+         div:nth-child(1)
+            transform: translate(0px, 10px) rotate(45deg)
+         div:nth-child(2), div:nth-child(3)
+            display: none
+         div:nth-child(4)            
+            transform: translate(0px, -9px) rotate(135deg)            
       &:hover .container__collapse-board
          background-color: #17609c         
       &-board 
@@ -30,11 +39,11 @@
          transition: .2s ease background-color
       &-nav
          position: relative
-         // display: none
+         z-index: 1
          height: 0
          opacity: 0
          width: 100%
-         background: linear-gradient(to top left, #010933, #01030d)
+         background: linear-gradient(to top, #010933, #01030d)
          top: 50px  
          transition: .7s ease-out opacity, .3s ease height 
          &__list
@@ -50,6 +59,7 @@
             &:hover
                color: #17609c
          &__active
+            z-index: 3
             opacity: 1
             height: calc(100vh - 680px)
       

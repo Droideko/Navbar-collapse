@@ -30,12 +30,9 @@
       let btn = document.querySelector('.container__collapse');
       let collapse = document.querySelector('.container__collapse-nav');
       btn.addEventListener('click', (e) => {
-         e.preventDefault();         
-         if (collapse.classList[1] == 'container__collapse-nav__active') {
-            collapse.classList.remove('container__collapse-nav__active');
-         } else {
-            collapse.classList.add('container__collapse-nav__active');            
-         }                           
+         e.preventDefault();  
+         let ClassOne = (collapse.classList[1] == 'container__collapse-nav__active') ? collapse.classList.remove('container__collapse-nav__active') : collapse.classList.add('container__collapse-nav__active');    
+         let ClassBtn = (btn.classList[1] == 'container__collapse-close') ? btn.classList.remove('container__collapse-close') : btn.classList.add('container__collapse-close');                          
       })  
    </script>
 </body>

@@ -12,6 +12,7 @@
   height: 100vh;
   width: 100%;
   background-color: #000000;
+  z-index: 2;
 }
 
 .container__collapse {
@@ -30,6 +31,24 @@
   position: absolute;
   right: 20px;
   top: 20px;
+  -webkit-transition: -webkit-transform 2s ease;
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
+}
+
+.container__collapse-close div:nth-child(1) {
+  -webkit-transform: translate(0px, 10px) rotate(45deg);
+          transform: translate(0px, 10px) rotate(45deg);
+}
+
+.container__collapse-close div:nth-child(2), .container__collapse-close div:nth-child(3) {
+  display: none;
+}
+
+.container__collapse-close div:nth-child(4) {
+  -webkit-transform: translate(0px, -9px) rotate(135deg);
+          transform: translate(0px, -9px) rotate(135deg);
 }
 
 .container__collapse:hover .container__collapse-board {
@@ -47,11 +66,12 @@
 
 .container__collapse-nav {
   position: relative;
+  z-index: 1;
   height: 0;
   opacity: 0;
   width: 100%;
-  background: -webkit-gradient(linear, right bottom, left top, from(#010933), to(#01030d));
-  background: linear-gradient(to top left, #010933, #01030d);
+  background: -webkit-gradient(linear, left bottom, left top, from(#010933), to(#01030d));
+  background: linear-gradient(to top, #010933, #01030d);
   top: 50px;
   -webkit-transition: .7s ease-out opacity, .3s ease height;
   transition: .7s ease-out opacity, .3s ease height;
@@ -79,6 +99,7 @@
 }
 
 .container__collapse-nav__active {
+  z-index: 3;
   opacity: 1;
   height: calc(100vh - 680px);
 }
