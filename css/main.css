@@ -103,4 +103,34 @@
   opacity: 1;
   height: calc(100vh - 680px);
 }
+
+@media screen and (min-width: 1200px) {
+  .container__collapse {
+    display: none;
+  }
+  .container__collapse-nav {
+    opacity: 1;
+  }
+  .container__collapse-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .container__collapse-nav__item {
+    margin: 0px 15px;
+  }
+  .container__collapse-nav__link {
+    font-size: 18px;
+  }
+  .container__collapse-nav__active {
+    background: #000;
+  }
+}
 /*# sourceMappingURL=main.css.map */

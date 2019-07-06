@@ -62,5 +62,23 @@
             z-index: 3
             opacity: 1
             height: calc(100vh - 680px)
+
+@media screen and (min-width: 1200px)
+   .container  
+      &__collapse
+         display: none           
+         &-nav
+            opacity: 1
+            &__list
+               display: flex
+               flex-direction: row
+               justify-content: flex-end
+            &__item
+               margin: 0px 15px
+            &__link
+               font-size: 18px
+            &__active
+               background: #000
+
       
       
